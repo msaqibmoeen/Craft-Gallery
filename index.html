@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craft Gallery</title>
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!--PRELOADER-->
+<div id="preloader">
+    <div class="pre-box">
+        <span class="pre-line"></span>
+        <span class="pre-line"></span>
+        <span class="pre-line"></span>
+        <span class="pre-line"></span>
+    </div>
+    <p class="pre-text">Craft Gallery</p>
+</div>
+
+<!--PROGRESS BAR-->
+<div id="progressBar"></div>
+
+<!--BACK TO TOP-->
+<button id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<!--NAVBAR-->
+<nav class="navBar" id="navbar">
+    <div class="artLogo">
+        <img src="./img/logo.png" alt="Craft Gallery Logo">
+    </div>
+
+    <!--Hamburger-->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+
+    <ul class="mainMenu" id="mainMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#aboutus" class="nav-link">About Us</a></li>
+        <li><a href="#salescollection" class="nav-link">Collection</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contactUs" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="btnSearch">
+        <div class="search-wrap">
+            <input type="text" id="searchInput" placeholder="Search paintings…" aria-label="Search">
+            <button aria-label="Search"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+</nav>
+
+<!--HERO-->
+<section class="heroSection" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <p class="hero-eyebrow">Welcome to</p>
+        <h1>Art <span>Gallery</span></h1>
+        <p class="hero-sub">Discover timeless masterpieces curated for the discerning collector.</p>
+        <a href="#salescollection" class="hero-btn">Explore Collection</a>
+    </div>
+    <div class="hero-shape hero-shape--1"></div>
+    <div class="hero-shape hero-shape--2"></div>
+</section>
+
+<!--ABOUT-->
+<section class="aboutSection" id="aboutus">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <p class="eyebrow">Who We Are</p>
+            <h2>About Us</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-image" data-aos="fade-right" data-aos-delay="100">
+                <img src="./img/R13.webp" alt="Gallery interior">
+                <div class="about-image--frame"></div>
+            </div>
+            <div class="about-text" data-aos="fade-left" data-aos-delay="200">
+                <p>An art gallery is a carefully selected venue designed to exhibit and sell visual art, including paintings, sculptures and photography. It encourages the appreciation of art and cultural involvement through the display of various artists' creations.</p>
+                <p>We organize exhibitions and frequently arrange events, workshops and educational initiatives to link the community with the art scene — nurturing creativity in every corner.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number">120+</span>
+                        <span class="stat-label">Artworks</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">45</span>
+                        <span class="stat-label">Artists</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Years</span>
+                    </div>
+                </div>
+                <a href="#salescollection" class="btn-secondary">View Collection</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--SALES / COLLECTION-->
+<section class="collectionSection" id="salescollection">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <p class="eyebrow">Handpicked for You</p>
+            <h2>Sales Collection</h2>
+            <div class="divider"></div>
+        </div>
+
+        <!--Filter pills-->
+        <div class="filter-bar" data-aos="fade-up" data-aos-delay="100">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="landscape">Landscape</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="urban">Urban</button>
+        </div>
+
+        <div class="saleCards" id="salesGrid">
+
+            <article class="card" data-aos="fade-up" data-aos-delay="0" data-category="landscape">
+                <div class="card-img-wrap">
+                    <img src="./img/R1.jpeg" alt="Countryside at Twilight">
+                    <div class="card-overlay">
+                        <button class="lightbox-btn" data-src="./img/R1.jpeg" data-title="Countryside at Twilight" aria-label="View full"><i class="fas fa-expand"></i></button>
+                    </div>
+                    <span class="card-tag">Landscape</span>
+                </div>
+                <div class="card-body">
+                    <h3>Countryside at Twilight</h3>
+                    <p class="card-price">Rs. 3,000</p>
+                    <p class="card-desc">A charming countryside house at twilight, bathed in the soft glow of evening lights with stars and a crescent moon.</p>
+                    <button class="order-btn" data-title="Countryside at Twilight">Order Now</button>
+                </div>
+            </article>
+
+            <article class="card" data-aos="fade-up" data-aos-delay="80" data-category="nature">
+                <div class="card-img-wrap">
+                    <img src="./img/R3.jpg" alt="Vivid Tree Silhouette">
+                    <div class="card-overlay">
+                        <button class="lightbox-btn" data-src="./img/R3.jpg" data-title="Vivid Tree Silhouette" aria-label="View full"><i class="fas fa-expand"></i></button>
+                    </div>
+                    <span class="card-tag">Nature</span>
+                </div>
+                <div class="card-body">
+                    <h3>Vivid Tree Silhouette</h3>
+                    <p class="card-price">Rs. 3,500</p>
+                    <p class="card-desc">A striking silhouette of a tree against a backdrop of vivid, swirling clouds — nature's raw beauty captured.</p>
+                    <button class="order-btn" data-title="Vivid Tree Silhouette">Order Now</button>
+                </div>
+            </article>
+
+            <article class="card" data-aos="fade-up" data-aos-delay="160" data-category="landscape">
+                <div class="card-img-wrap">
+                    <img src="./img/R10.jpg" alt="Rural Dusk">
+                    <div class="card-overlay">
+                        <button class="lightbox-btn" data-src="./img/R10.jpg" data-title="Rural Dusk" aria-label="View full"><i class="fas fa-expand"></i></button>
+                    </div>
+                    <span class="card-tag">Landscape</span>
+                </div>
+                <div class="card-body">
+                    <h3>Rural Dusk</h3>
+                    <p class="card-price">Rs. 2,000</p>
+                    <p class="card-desc">A delightful rural residence during dusk, illuminated by the gentle radiance of nightfall with twinkling stars.</p>
+                    <button class="order-btn" data-title="Rural Dusk">Order Now</button>
+                </div>
+            </article>
+
+            <article class="card" data-aos="fade-up" data-aos-delay="240" data-category="landscape">
+                <div class="card-img-wrap">
+                    <img src="./img/R4.jpg" alt="Moonlit Countryside">
+                    <div class="card-overlay">
+                        <button class="lightbox-btn" data-src="./img/R4.jpg" data-title="Moonlit Countryside" aria-label="View full"><i class="fas fa-expand"></i></button>
+                    </div>
+                    <span class="card-tag">Landscape</span>
+                </div>
+                <div class="card-body">
+                    <h3>Moonlit Countryside</h3>
+                    <p class="card-price">Rs. 2,500</p>
+                    <p class="card-desc">A charming countryside home at twilight. The sky is adorned with shimmering stars and a crescent moon.</p>
+                    <button class="order-btn" data-title="Moonlit Countryside">Order Now</button>
+                </div>
+            </article>
+
+            <article class="card" data-aos="fade-up" data-aos-delay="320" data-category="nature">
+                <div class="card-img-wrap">
+                    <img src="./img/R16.jpg" alt="Warmth of Nature">
+                    <div class="card-overlay">
+                        <button class="lightbox-btn" data-src="./img/R16.jpg" data-title="Warmth of Nature" aria-label="View full"><i class="fas fa-expand"></i></button>
+                    </div>
+                    <span class="card-tag">Nature</span>
+                </div>
+                <div class="card-body">
+                    <h3>Warmth of Nature</h3>
+                    <p class="card-price">Rs. 2,500</p>
+                    <p class="card-desc">This mesmerizing artwork captures the rich hues of nature with a bold tree silhouette. Perfect for adding warmth.</p>
+                    <button class="order-btn" data-title="Warmth of Nature">Order Now</button>
+                </div>
+            </article>
+
+            <article class="card" data-aos="fade-up" data-aos-delay="400" data-category="urban">
+                <div class="card-img-wrap">
+                    <img src="./img/R6.webp" alt="Rainy Park Evening">
+                    <div class="card-overlay">
+                        <button class="lightbox-btn" data-src="./img/R6.webp" data-title="Rainy Park Evening" aria-label="View full"><i class="fas fa-expand"></i></button>
+                    </div>
+                    <span class="card-tag">Urban</span>
+                </div>
+                <div class="card-body">
+                    <h3>Rainy Park Evening</h3>
+                    <p class="card-price">Rs. 2,000</p>
+                    <p class="card-desc">A rain-drenched park illuminated by radiant street lights. Vivid hues and expert brushstrokes form a captivating scene.</p>
+                    <button class="order-btn" data-title="Rainy Park Evening">Order Now</button>
+                </div>
+            </article>
+
+            <article class="card" data-aos="fade-up" data-aos-delay="480" data-category="urban">
+                <div class="card-img-wrap">
+                    <img src="./img/R17.jpg" alt="Neon Rain">
+                    <div class="card-overlay">
+                        <button class="lightbox-btn" data-src="./img/R17.jpg" data-title="Neon Rain" aria-label="View full"><i class="fas fa-expand"></i></button>
+                    </div>
+                    <span class="card-tag">Urban</span>
+                </div>
+                <div class="card-body">
+                    <h3>Neon Rain</h3>
+                    <p class="card-price">Rs. 2,000</p>
+                    <p class="card-desc">A lively rain-soaked park illuminated by glowing street lamps. The vivid hues form a captivating, immersive scene.</p>
+                    <button class="order-btn" data-title="Neon Rain">Order Now</button>
+                </div>
+            </article>
+
+            <article class="card" data-aos="fade-up" data-aos-delay="560" data-category="urban">
+                <div class="card-img-wrap">
+                    <img src="./img/R8.webp" alt="Midnight Stroll">
+                    <div class="card-overlay">
+                        <button class="lightbox-btn" data-src="./img/R8.webp" data-title="Midnight Stroll" aria-label="View full"><i class="fas fa-expand"></i></button>
+                    </div>
+                    <span class="card-tag">Urban</span>
+                </div>
+                <div class="card-body">
+                    <h3>Midnight Stroll</h3>
+                    <p class="card-price">Rs. 2,000</p>
+                    <p class="card-desc">A rain-soaked park illuminated by radiant street lights. An essential addition to your art collection.</p>
+                    <button class="order-btn" data-title="Midnight Stroll">Order Now</button>
+                </div>
+            </article>
+
+            <article class="card" data-aos="fade-up" data-aos-delay="640" data-category="landscape">
+                <div class="card-img-wrap">
+                    <img src="./img/R9.jpeg" alt="Starlit Village">
+                    <div class="card-overlay">
+                        <button class="lightbox-btn" data-src="./img/R9.jpeg" data-title="Starlit Village" aria-label="View full"><i class="fas fa-expand"></i></button>
+                    </div>
+                    <span class="card-tag">Landscape</span>
+                </div>
+                <div class="card-body">
+                    <h3>Starlit Village</h3>
+                    <p class="card-price">Rs. 2,000</p>
+                    <p class="card-desc">Twinkling stars and a crescent moon adorn the sky while verdant foliage surrounds the home. A nostalgic masterpiece.</p>
+                    <button class="order-btn" data-title="Starlit Village">Order Now</button>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="servicesSection" id="services">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <p class="eyebrow">What We Offer</p>
+            <h2>Our Services</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="services-intro" data-aos="fade-up" data-aos-delay="100">
+            <p>Our art gallery offers a diverse range of services to cater to all your artistic needs — from art acquisition and sales to investment advisory, market analysis and customised marketing strategies.</p>
+        </div>
+
+        <div class="servicesCard">
+            <article class="scard" data-aos="fade-up" data-aos-delay="0">
+                <div class="scard-img-wrap">
+                    <img src="./img/R30.jpg" alt="Drawing">
+                    <div class="scard-number">01</div>
+                </div>
+                <div class="scard-body">
+                    <h3><i class="fas fa-pen-fancy"></i> Drawing</h3>
+                    <p>Custom, high-quality drawings tailored to your vision — from personalized portraits to detailed landscapes and abstract pieces.</p>
+                </div>
+            </article>
+
+            <article class="scard" data-aos="fade-up" data-aos-delay="100">
+                <div class="scard-img-wrap">
+                    <img src="./img/R31.jpg" alt="Designing">
+                    <div class="scard-number">02</div>
+                </div>
+                <div class="scard-body">
+                    <h3><i class="fas fa-ruler-combined"></i> Designing</h3>
+                    <p>Merging creativity and elegance — our skilled designers craft unique, tailored pieces that reflect your personal style.</p>
+                </div>
+            </article>
+
+            <article class="scard" data-aos="fade-up" data-aos-delay="200">
+                <div class="scard-img-wrap">
+                    <img src="./img/R11.jpg" alt="Painting">
+                    <div class="scard-number">03</div>
+                </div>
+                <div class="scard-body">
+                    <h3><i class="fas fa-paint-brush"></i> Painting</h3>
+                    <p>Customised paintings in every style — from traditional to modern. Personalised consultations ensure the perfect piece.</p>
+                </div>
+            </article>
+
+            <article class="scard" data-aos="fade-up" data-aos-delay="300">
+                <div class="scard-img-wrap">
+                    <img src="./img/R26.jpg" alt="Art Management">
+                    <div class="scard-number">04</div>
+                </div>
+                <div class="scard-body">
+                    <h3><i class="fas fa-layer-group"></i> Art Management</h3>
+                    <p>Expert handling and supervision of your collection — acquiring, organising, conserving and exhibiting artworks.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!--TESTIMONIALS-->
+<section class="testimonialStrip">
+    <div class="container">
+        <div class="testimonials" data-aos="fade-up">
+            <div class="testi-item">
+                <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"An extraordinary gallery. The curation is impeccable and the service is truly world-class."</p>
+                <span>— Amina Raza</span>
+            </div>
+            <div class="testi-item">
+                <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"I purchased three paintings last month. Every single one exceeded my expectations beautifully."</p>
+                <span>— James Crawford</span>
+            </div>
+            <div class="testi-item">
+                <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></div>
+                <p>"The art management service is phenomenal. My collection has never felt better cared for."</p>
+                <span>— Leila Hussain</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--CONTACT-->
+<section class="contactSection" id="contactUs">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <p class="eyebrow">Get in Touch</p>
+            <h2>Book a Visit</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h4>Location</h4>
+                    <p>Okara, Punjab, Pakistan</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-phone"></i></div>
+                    <h4>Phone</h4>
+                    <p>+92 344 000 0000</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                    <h4>Email</h4>
+                    <p>craftgallery@gmail.com</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-clock"></i></div>
+                    <h4>Gallery Hours</h4>
+                    <p>Mon – Sat: 10 AM – 7 PM</p>
+                </div>
+            </div>
+
+            <form class="bookingForm" id="bookingForm" data-aos="fade-left" data-aos-delay="200" novalidate>
+                <div class="form-group">
+                    <label for="formName">Customer Name</label>
+                    <input type="text" id="formName" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="formEmail">Customer Email</label>
+                    <input type="email" id="formEmail" placeholder="you@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="formMessage">Message</label>
+                    <textarea id="formMessage" rows="5" placeholder="Tell us how we can help…" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER-->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="footer-brand">
+            <img src="./img/logo.png" alt="Craft Gallery">
+            <p>Curating beauty, inspiring minds. Craft Gallery is your destination for timeless art and cultural experiences.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                <li><a href="#aboutus"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                <li><a href="#salescollection"><i class="fas fa-chevron-right"></i> Collection</a></li>
+                <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                <li><a href="#contactUs"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> Okara, Punjab, Pakistan</li>
+                <li><i class="fas fa-phone"></i> +92 344 000 0000</li>
+                <li><i class="fas fa-envelope"></i> craftgallery@gmail.com</li>
+            </ul>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy; 2024–2025 <strong>Craft Gallery</strong> | Designed by <a href="https://saqibmoeen.netlify.app/" target="_blank" rel="noopener">SM Developer</a></p>
+    </div>
+</footer>
+
+<!--LIGHTBOX-->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close"><i class="fas fa-times"></i></button>
+    <div class="lightbox-content">
+        <img src="" alt="Lightbox" id="lightboxImg">
+        <p id="lightboxTitle"></p>
+    </div>
+</div>
+
+<!--TOAST-->
+<div class="toast" id="toast">
+    <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+    <p id="toastMsg">Done!</p>
+</div>
+
+<!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
